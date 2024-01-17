@@ -1,15 +1,11 @@
+// monty.h
+
 #ifndef MONTY_H
 #define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * struct stack_s - doubly linked list representation of a stack
- * @n: integer
- * @prev: points to the previous element of the stack
- * @next: points to the next element of the stack
- */
 typedef struct stack_s
 {
     int n;
@@ -19,5 +15,7 @@ typedef struct stack_s
 
 void push(stack_t **stack, int value);
 void pall(stack_t **stack);
+int execute_monty_file(FILE *file, stack_t **stack);
+void free_stack(stack_t **stack);
 
 #endif /* MONTY_H */
